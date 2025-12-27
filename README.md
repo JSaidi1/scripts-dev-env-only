@@ -1,6 +1,12 @@
 # scripts-dev-env-only
 Useful scripts to be used only by developers in their development environment.
 
+## How to use it?
+- Take **scripts-dev-env-only** folder and add it to the root project folder
+- Delete **.git** folder in **scripts-dev-env-only** (⚠️ **warning:** don't delete **.git** which exists in the root project folder if exists)
+- Delete **.gitignore** file in **scripts-dev-env-only** (⚠️ **warning:** don't delete **.gitignore** file which exists in the root project folder)
+- Delete **requirements.txt** file in **scripts-dev-env-only** (⚠️ **warning:** don't delete **requirements.txt** file which exists in the root project folder)
+
 ## Current scripts
 ### Python
 #### 1 - git_setup_hook.py
