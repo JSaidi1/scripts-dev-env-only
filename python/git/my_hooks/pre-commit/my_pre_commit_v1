@@ -12,7 +12,7 @@
 #      - can contains interger numbers
 #      - should be 60 characters or less
 #      - no spaces and only '-' or '/' characters
-#      - prevent commits directly on the main branch
+#      - prevent commits directly on the main or master branchs
 # Dependencies: No dependencies
 # Environment:
 #      - os: windows 11
@@ -71,8 +71,8 @@ validate_branch(){
 	fi
 
     # === prevent commits directly on the main branch
-    if [ "$branch_name" = "main" ]; then
-        echo "Error(pre-commit): you cannot commit directly to the 'main' branch!" >&2
+    if [[ "$branch_name" = "main" || "$branch_name" = "master" ]]; then
+        echo "Error(pre-commit): you cannot commit directly to the 'main' or 'master' branchs!" >&2
         exit 1 # Exit the script and prevent commit
     fi
 }
