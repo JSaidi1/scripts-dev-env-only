@@ -6,7 +6,7 @@ Useful scripts to be used only by developers in their development environment.
 - Delete **.git** folder in **scripts-dev-env-only** folder (⚠️ **warning:** don't delete **.git** which exists in the root of your project folder if exists)
 - Delete **.gitignore** file in **scripts-dev-env-only** folder (⚠️ **warning:** don't delete **.gitignore** file which exists in the root of your project folder)
 - Delete **requirements.txt** file in **scripts-dev-env-only** folder (⚠️ **warning:** don't delete **requirements.txt** file which exists in the root of your project folder)
-- Ignore tracking **scripts-dev-env-only** folder (add **scripts-dev-env-only/** to **.gitignore** file of your project folder)
+- Ignore tracking **scripts-dev-env-only** folder (add **\**/scripts-dev-env-only/** to **.gitignore** file of your project folder)
 
 ## Current scripts
 ### Python
