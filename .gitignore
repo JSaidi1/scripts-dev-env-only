@@ -208,3 +208,6 @@ __marimo__/
 
 # temp file (vscode)
 **/tempCodeRunnerFile.py
+
+# buid folder 
+**/build

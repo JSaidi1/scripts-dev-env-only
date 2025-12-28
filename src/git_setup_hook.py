@@ -23,12 +23,18 @@ from pathlib import Path
 import re
 import sys
 
+
+from utils.utils_funcs_git_setup_hook import get_my_hooks_dir
+
+
 # =================================================================================================================
 #                                                   CONFIG.                            
 # =================================================================================================================
 REPO_PATH = os.getcwd() # Get the current working directory (should be the root of the repo)
 HOOKS_DIR = os.path.join(REPO_PATH, '.git', 'hooks') # Path to the .git/hooks directory
-MY_HOOKS_DIR = os.path.join(REPO_PATH, 'python', 'git', 'my_hooks')
+MY_HOOKS_DIR = get_my_hooks_dir(REPO_PATH)
+# print("MY_HOOKS_DIR:", MY_HOOKS_DIR)
+
 
 # =================================================================================================================
 #                                                   FUNCTIONS                            
