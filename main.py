@@ -44,7 +44,7 @@ def create_setup_hook_build():
 
     output_zip_name = "scripts-dev-env-only.zip"
     output_zip_path = os.path.join(BUILD_DIR, output_zip_name)
-    files_to_include = []
+    files_to_include = ["requirements.txt", "README.md"]
     folders_to_include = ["src", ]
     exclude_patterns = (
         "__pycache__",
@@ -58,10 +58,6 @@ def create_setup_hook_build():
     ensure_dir_exists(BUILD_DIR)
 
     # === Define path and build zip name 
-    
-
-    # === 
-
 
     with zipfile.ZipFile(output_zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
         # Add individual files
