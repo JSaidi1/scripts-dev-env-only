@@ -54,7 +54,10 @@ Useful scripts to be used only by developers in their development environment.
 Create a zip build in /build directory
 
 #### Structure of this build
-
+    scripts-dev-env-only
+    |   README.md
+    |   requirements.txt
+    |
     +---src
         |   git_setup_hook.py
         |   
