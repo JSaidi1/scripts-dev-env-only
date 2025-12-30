@@ -83,6 +83,11 @@ Create a zip build in /build directory
 - Take the build **scripts-dev-env-only.zip** and unzip it
 - Put the unzipped folder on the root of your project folder
 - Ignore tracking **scripts-dev-env-only** folder (add **\*\*/scripts-dev-env-only/** to **.gitignore** file of your project folder)
+- Install dependencies for this module from **requirements.txt** file: 
+```bash
+    > pip install -r <relatif path of requirements.txt file>
+```
+⚠️ **Warning:**: If your project runs in a **virtual environment**: To avoid polluting this **virtual environment** => Install this module's **dependencies** **outside** your project virtual environment and also, run the module scripts **outside** of it.
 
 After that you will be able to execute useful scripts which contains **scripts-dev-env-only** folder.
 
@@ -93,7 +98,7 @@ Description:
 This script automatically sets up a Git hook in the current repository when executed.
 
 Usage:
-    python git_setup_hook.py
+    python <relatif path to git_setup_hook.py>
     
 Environments:
     - os: windows 11
