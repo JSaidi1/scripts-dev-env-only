@@ -124,6 +124,5 @@ This script is used to create **commit-msg** hook in the default .git/hooks fold
 
 - Description in ./python/git/my_hooks/pre-commit/my_pre_commit_v1_description
 
-
-
-
+# Author
+J.SAIDI
