@@ -7,7 +7,7 @@
 # Version: 1
 # Description: Pre-commit hook to enforce checks and guidelines:
 #    => branch:
-#      - format: "main|master|develop|dev|release|feature|fix|bugfix|hotfix|chore|docs|test|design|experiment|refactor"
+#      - format: "main|master|develop|dev|release|feature|fix|bugfix|hotfix|chore|docs|test|design|experiment|refactor|style"
 #      - lowercase only
 #      - can contains interger numbers
 #      - should be 60 characters or less
@@ -29,7 +29,7 @@ CURRENT_BRANCH_NAME=$(git symbolic-ref --quiet --short HEAD)
 
 # --- Validation ---
 BRANCH_VALID_TYPES_MATCH_EXACTLY="main|master|develop|dev|release"
-BRANCH_VALID_TYPES_MATCH_STARTS_WITH="feature|fix|bugfix|hotfix|chore|docs|test|design|experiment|refactor"
+BRANCH_VALID_TYPES_MATCH_STARTS_WITH="feature|fix|bugfix|hotfix|chore|docs|test|design|experiment|refactor|style"
 BRANCH_LENGTH_LIMIT=60
 
 
@@ -65,7 +65,7 @@ validate_branch(){
 		echo -e "
 		Error(pre-commit): branch name ($branch_name) is not allowed. It must:\n
 		- be exactly: 'main' or 'master' or 'develop' or 'dev' or 'release'\n
-		- or starts with: 'feature/' or 'fix/' or 'bugfix/' or 'hotfix/' or 'chore/' or 'docs/' or 'test/' or 'design/' or 'experiment/' or 'refactor/'
+		- or starts with: 'feature/' or 'fix/' or 'bugfix/' or 'hotfix/' or 'chore/' or 'docs/' or 'test/' or 'design/' or 'experiment/' or 'refactor/' or 'style/'
 		" >&2
 		exit 1 # Exit the script and prevent commit
 	fi

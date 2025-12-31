@@ -148,7 +148,7 @@ def check_my_hook_script_files_in_my_hook_dir(my_hook_dir: str)-> list: # in my_
         content = Path(path_desc_file).read_text(encoding="utf-8").strip()
         # print(content)
 
-        if not (content.startswith('=============================================================================================================') and content.endswith('=============================================================================================================')):
+        if not (content.startswith('===========================================================================================================================') and content.endswith('===========================================================================================================================')):
             invalid_descriptions.append(desc_file)
             continue
         # print("invalid_descriptions: ", invalid_descriptions)
